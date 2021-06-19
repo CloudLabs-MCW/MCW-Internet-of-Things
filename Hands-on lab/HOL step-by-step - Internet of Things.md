@@ -595,7 +595,7 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
 
 ### Task 1: Create a Stream Analytics job for hot path processing to Power BI
 
-1. In the [Azure Portal](https://portal.azure.com), expand the left menu and select **+ Create a resource**, enter `stream analytics` into the **Search the Marketplace** box, select **Stream Analytics job** from the results, and select **Create**.
+1. In the [Azure Portal](https://portal.azure.com), expand the left menu and select **+ Create a resource**, enter `stream analytics job` into the **Search the Marketplace** box, select **Stream Analytics job** from the results, and select **Create**.
 
    ![In the Azure Portal, +Create a resource is highlighted, "stream analytics" is entered into the Search the Marketplace box, and Stream Analytics job is highlighted in the results.](media/image33.png 'Create Stream Analytics job')
 
@@ -747,7 +747,7 @@ Fabrikam would like to be able to capture all the "cold" data into scalable stor
 
 1. In the [Azure portal](https://portal.azure.com), select **+ Create a resource**, enter `storage account` into the **Search the Marketplace** box, select **Storage account** from the results, and select **Create**.
 
-   !["storage account" is entered into the Search the Marketplace box, and Storage account is highlighted in the results.](media/create-resource-storage-account.png 'Create Storage account')
+   !["storage account" is entered into the Search the Marketplace box, and Storage account is highlighted in the results.](media/image56.png 'Create Storage account')
 
 2. In the **Create storage account** on the **Basics** tab, enter the following:
 
@@ -757,22 +757,24 @@ Fabrikam would like to be able to capture all the "cold" data into scalable stor
    - **Location**: Select the location you are using for resources in this hands-on lab.
    - **Performance**: Select **Standard**.
    - **Redundancy**: Select **Locally-redundant storage (LRS)**.
+   - Click on the **Advanced** tab.
 
-   ![The Create storage account blade is displayed, with the previously mentioned settings entered into the appropriate fields.](media/storage-account-create-new.png 'Create storage account')
+   ![The Create storage account blade is displayed, with the previously mentioned settings entered into the appropriate fields.](media/image57.png 'Create storage account')
 
-3. Select the **Advanced** tab, select the following:
+3. In the **Advanced** tab, select the following:
 
    - **Secure transfer required**: Unchecked.
+   - Select **Review + create**.
 
-   ![The Create storage account blade is displayed with options under the Advanced tab.](media/storage-account-create-new-advanced.png 'Create storage account - Advanced')
+   ![The Create storage account blade is displayed with options under the Advanced tab.](media/image58.png 'Create storage account - Advanced')
 
-4. Select **Review + create**.
+4. Once validation has passed, select **Create**.
 
-5. Once validation has passed, select **Create**.
+   ![The Access Keys blade is displayed and the key1 copy button is highlighted.](media/image59.png)
 
-6. Once provisioned, navigate to your storage account, select **Access keys** from the left-hand menu, and copy the **key1** Key value into a text editor, such as Notepad, for later use.
+5. Once provisioned, navigate to your storage account, select **Access keys** from the left-hand menu, and copy the **key1** Key value into a text editor, such as Notepad, for later use.
 
-   ![The Access Keys blade is displayed and the key1 copy button is highlighted.](media/storage-account-key.png 'Storage account - Keys')
+   ![The Access Keys blade is displayed and the key1 copy button is highlighted.](media/image60.png 'Storage account - Keys')
 
 ### Task 2: Create the Stream Analytics job for cold path processing
 
@@ -780,7 +782,7 @@ To capture all metrics for the cold path, set up another Stream Analytics job th
 
 1. In the [Azure Portal](https://portal.azure.com), select **+ Create a resource**, enter `stream analytics job` into the **Search the Marketplace** box, select **Stream Analytics job** from the results, and select **Create**.
 
-   ![In the Azure Portal, +Create a resource is highlighted, "stream analytics" is entered into the Search the Marketplace box, and Stream Analytics job is highlighted in the results.](media/create-resource-stream-analytics-job.png 'Create Stream Analytics job')
+   ![In the Azure Portal, +Create a resource is highlighted, "stream analytics" is entered into the Search the Marketplace box, and Stream Analytics job is highlighted in the results.](media/image33.png 'Create Stream Analytics job')
 
 2. On the New Stream Analytics Job blade, enter the following:
 
@@ -790,18 +792,17 @@ To capture all metrics for the cold path, set up another Stream Analytics job th
    - **Location**: Select the location you are using for resources in this hands-on lab.
    - **Hosting environment**: Select **Cloud**.
    - **Streaming units**: Drag the slider all the way to the left to select `1` streaming unit.
+   - Select **Create**.
 
-     ![The New Stream Analytics Job blade is displayed, with the previously mentioned settings entered into the appropriate fields.](media/stream-analytics-job-create-cold-stream.png 'New Stream Analytics Job blade')
+     ![The New Stream Analytics Job blade is displayed, with the previously mentioned settings entered into the appropriate fields.](media/image61.png 'New Stream Analytics Job blade')
 
-3. Select **Create**.
+3. Once provisioned, navigate to your new **Stream Analytics job** in the portal.
 
-4. Once provisioned, navigate to your new **Stream Analytics job** in the portal.
+4. On the **Stream Analytics job** blade, select **Inputs** from the left-hand menu, under **Job Topology**, then select **+Add stream input**, and select **IoT Hub** from the dropdown menu to add an input connected to your IoT Hub.
 
-5. On the **Stream Analytics job** blade, select **Inputs** from the left-hand menu, under **Job Topology**, then select **+Add stream input**, and select **IoT Hub** from the dropdown menu to add an input connected to your IoT Hub.
+   ![On the Stream Analytics job blade, Inputs is selected under Job Topology in the left-hand menu, and +Add stream input is highlighted in the Inputs blade, and IoT Hub is highlighted in the drop down menu.](media/image62.png 'Add Stream Analytics job inputs')
 
-   ![On the Stream Analytics job blade, Inputs is selected under Job Topology in the left-hand menu, and +Add stream input is highlighted in the Inputs blade, and IoT Hub is highlighted in the drop down menu.](media/stream-analytics-job-inputs-add-cold.png 'Add Stream Analytics job inputs')
-
-6. On the **New Input** blade, enter the following:
+5. On the **New Input** blade, enter the following:
 
    - **Input alias**: Enter `iothub`.
    - Choose **Select IoT Hub from your subscriptions**.
@@ -814,16 +815,15 @@ To capture all metrics for the cold path, set up another Stream Analytics job th
    - **Event serialization format**: Select **JSON**.
    - **Encoding**: Select **UTF-8**.
    - **Event compression type**: Leave set to **None**.
+   - Select **Save**.
 
-     ![IoT Hub New Input blade is displayed with the values specified above entered into the appropriate fields.](media/stream-analytics-job-inputs-add-iot-hub-input-cold-stream.png 'IoT Hub New Input blade')
+     ![IoT Hub New Input blade is displayed with the values specified above entered into the appropriate fields.](media/image63.png 'IoT Hub New Input blade')
 
-7. Select **Save**.
+6. Next, select **Outputs** from the left-hand menu, under **Job Topology**, and select **+ Add**, then select **Blob storage/ADLS Gen2** from the drop-down menu.
 
-8. Next, select **Outputs** from the left-hand menu, under **Job Topology**, and select **+ Add**, then select **Blob storage/ADLS Gen2** from the drop-down menu.
+   ![Outputs is highlighted in the left-hand menu, under Job Topology, +Add is selected, and Blob storage is highlighted in the drop down menu.](media/image65.png 'Add Blob storage Output')
 
-   ![Outputs is highlighted in the left-hand menu, under Job Topology, +Add is selected, and Blob storage is highlighted in the drop down menu.](media/stream-analytics-job-outputs-add-blob-storage.png 'Add Blob storage Output')
-
-9. On the **Blob storage** output blade, enter the following:
+7. On the **Blob storage** output blade, enter the following:
 
    - **Output alias**: Set to `blobs`.
    - Choose **Select blob storage from your subscriptions**.
@@ -839,7 +839,7 @@ To capture all metrics for the cold path, set up another Stream Analytics job th
    - **Minimum rows**: Enter **100**.
    - **Maximum time**: Enter **5** Minutes.
 
-     ![Blob storage New output blade is displayed, with the values mentioned above entered into the appropriate fields.](media/stream-analytics-job-outputs-blob-storage-new.png 'Add Blob storage Output')
+     ![Blob storage New output blade is displayed, with the values mentioned above entered into the appropriate fields.](media/image64.png 'Add Blob storage Output')
 
      Select **Save**.
 
