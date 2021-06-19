@@ -206,13 +206,15 @@ Creating an enrollment group enables Fabrikam to allow devices to self-register.
     - **Initial Device Twin State**: Retain the default value.
     - **Enable entry**: Select `Enable`.
   
-   ![The Add Enrollment Group form is shown populated with the preceding values.](media/image6.png "Add Enrollment Group form")
+   ![The Add Enrollment Group form is shown populated with the preceding values.](media/image16.png "Add Enrollment Group form")
 
 3. Select the newly created enrollment group from the **Enrollment Groups** list.
 
+   ![The Add Enrollment Group form is shown populated with the preceding values.](media/image17.png "Add Enrollment Group form")
+
 4. On the Enrollment Group Details screen, copy the **Primary Key** value and record it for a future task.
 
-    ![The Enrollment Group Details screen is shown with the copy button highlighted next to the Primary Key field.](media/dps_enrollmentgroup_primarykey.png "Enrollment Group Details")
+    ![The Enrollment Group Details screen is shown with the copy button highlighted next to the Primary Key field.](media/image18.png "Enrollment Group Details")
 
 ## Exercise 2: Completing the Smart Meter Simulator
 
