@@ -98,7 +98,7 @@ In your architecture design session with Fabrikam, it was agreed upon to use Azu
 
 In these steps, you will provision an instance of IoT Hub.
 
-1. In your browser, navigate to the [Azure portal](https://portal.azure.com), select **+Create a resource** in the navigation pane, enter `IoT Hub` into the **Search the Marketplace** box, and select **IoT Hub** from the results.
+1. In your browser, navigate to the [Azure portal](https://portal.azure.com), select **+Create a resource** in the navigation pane, enter _IoT Hub_ into the **Search the Marketplace** box, and select **IoT Hub** from the results.
 
    !["IoT Hub" is entered into the Search the Marketplace box. IoT Hub is highlighted in the search results.](./media/create-resource-iot-hub.png 'Create an IoT Hub')
 
@@ -114,29 +114,27 @@ In these steps, you will provision an instance of IoT Hub.
 
    - **IoT Hub Name**: Enter a unique name, such as `smartmeter-hub-SUFFIX`.
 
-     ![The Basics tab for IoT Hub is displayed, with the values specified above entered into the appropriate fields.](./media/iot-hub-basics-blade.png 'Create IoT Hub Basics tab')
+     ![The Basics tab for IoT Hub is displayed, with the values specified above entered into the appropriate fields.](./media/image01.png 'Create IoT Hub Basics tab')
 
 4. Select the **Management** tab. Accept the default Pricing and scale tier of **S1: Standard tier**, and select **Review + create**.
 
-    ![The Management tab for IoT Hub is displayed with the Standard pricing tier selected.](media/iot-hub-management-tab.png 'Create IoT Hub Management tab')
+    ![The Management tab for IoT Hub is displayed with the Standard pricing tier selected.](media/image02.png 'Create IoT Hub Management tab')
 
 5. Once validation has passed, select **Create**.
 
+    ![The Management tab for IoT Hub is displayed with the Standard pricing tier selected.](media/image03.png 'Create IoT Hub Management tab')
+  
 6. When the IoT Hub deployment is completed, you will receive a notification in the Azure portal. Select **Go to resource** in the notification.
 
-   ![Screenshot of the Deployment succeeded message, with the Go to resource button highlighted.](./media/iot-hub-deployment-succeeded.png 'Deployment succeeded message')
+   ![Screenshot of the Deployment succeeded message, with the Go to resource button highlighted.](./media/image04.png 'Deployment succeeded message')
 
-7. From the **IoT Hub's Overview** blade, select **Shared access policies** under **Settings** on the left-hand menu.
+7. From the **IoT Hub's Overview** blade, select **Shared access policies** under **Settings** on the left-hand menu and select **iothubowner** policy.
 
-   ![Screenshot of the Overview blade, settings section. Under Settings, Shared access policies is highlighted.](./media/iot-hub-shared-access-policies.png 'Overview blade, settings section')
+   ![Screenshot of the Overview blade, settings section. Under Settings, Shared access policies is highlighted.](./media/image05.png 'Overview blade, settings section')
 
-8. Select **iothubowner** policy.
+8. In the **iothubowner** blade, select the **Copy** button to the right of the **Connection string - primary key** field. Record this value for a future task.
 
-   ![The Azure portal is shown with the iothubowner selected.](./media/iot-hub-shared-access-policies-iothubowner.png 'IoT Hub Owner shared access policy')
-
-9. In the **iothubowner** blade, select the **Copy** button to the right of the **Connection string - primary key** field. Record this value for a future task.
-
-   ![Screenshot of the iothubowner blade. The connection string - primary key field is highlighted.](./media/iot-hub-shared-access-policies-iothubowner-blade.png 'iothubowner blade')
+   ![Screenshot of the iothubowner blade. The connection string - primary key field is highlighted.](./media/image06.png 'iothubowner blade')
 
 ### Task 2: Deploy the Device Provisioning Service
 
@@ -144,9 +142,11 @@ In these steps, you will deploy an instance of the Device Provisioning Service (
 
 1. In your browser, navigate to the [Azure portal](https://portal.azure.com), select **+Create a resource** in the navigation pane, enter `IOT Hub Device Provisioning Service` into the **Search the Marketplace** box, and select **IoT Hub** from the results.
 
-    ![The Search the Marketplace textbox is shown with IoT Hub Device Provisioning Service entered as the search criteria and is selected from the search results.](media/dps_marketplace_search.png "Search the Marketplace")
+    ![The Search the Marketplace textbox is shown with IoT Hub Device Provisioning Service entered as the search criteria and is selected from the search results.](media/image07.png "Search the Marketplace")
 
 2. On the resource overview page, select **Create**.
+
+    ![The Search the Marketplace textbox is shown with IoT Hub Device Provisioning Service entered as the search criteria and is selected from the search results.](media/image08.png "Search the Marketplace")
 
 3. On the IoT Hub device provisioning service **Basics** tab, complete the form as follows:
 
@@ -158,21 +158,25 @@ In these steps, you will deploy an instance of the Device Provisioning Service (
 
    - **Region**: Select the location you are using for this hands-on lab.
 
-    ![The DPS creation form Basics tab is shown populated with the above values.](media/dps_basics_form.png "DPS Basics Tab")
+    ![The DPS creation form Basics tab is shown populated with the above values.](media/image09.png "DPS Basics Tab")
 
 4. Select **Review + create**, then once validation has passed, select **Create** once more to deploy the service.
 
+    ![The DPS creation form Basics tab is shown populated with the above values.](media/image10.png "DPS Basics Tab")
+
 5. When the DPS deployment is completed, select **Go to resource** on the deployment screen.
+
+    ![The DPS Overview screen displays with the ID Scope field highlighted.](media/image11.png "DPS Overview screen.")
 
 6. On the Overview screen of the Device Provisioning Service, copy and record the value for **ID Scope** for a future task.
 
-    ![The DPS Overview screen displays with the ID Scope field highlighted.](media/dps_overview_essentials.png "DPS Overview screen.")
+    ![The DPS Overview screen displays with the ID Scope field highlighted.](media/image12.png "DPS Overview screen.")
 
 ### Task 3: Link the IoT Hub to the Device Provisioning Service
 
 1. Remaining in the DPS resource, select **Linked IoT hubs** from the left menu, located beneath the **Settings** heading. Then select **+Add** from the toolbar.
 
-    ![The DPS Linked IoT hubs screen is shown with Linked IoT hubs selected in the left menu and the +Add button highlighted in the toolbar.](media/dps_linkediothubs_add_menu.png "DPS Linked IoT hubs")
+    ![The DPS Linked IoT hubs screen is shown with Linked IoT hubs selected in the left menu and the +Add button highlighted in the toolbar.](media/image13.png "DPS Linked IoT hubs")
 
 2. In the Add link to IoT hub blade, populate the form as follows, then select **Save**:
 
@@ -180,7 +184,7 @@ In these steps, you will deploy an instance of the Device Provisioning Service (
    - **IoT Hub**: Select the `smartmeter-hub-{SUFFIX}` IoT Hub.
    - **Access Policy**: Select `iothubowner`.
 
-    ![The Add link to IoT hub blade is shown populated with the preceding values.](media/dps_addlinktoiothub_form.png "Add link to IoT hub blade")
+    ![The Add link to IoT hub blade is shown populated with the preceding values.](media/image14.png "Add link to IoT hub blade")
 
 ### Task 4: Create an enrollment group
 
@@ -188,7 +192,7 @@ Creating an enrollment group enables Fabrikam to allow devices to self-register.
 
 1. Remaining in the DPS resource, select **Manage enrollments** from the left menu, then select **+Add enrollment group** from the toolbar menu.
 
-    ![The DPS Manage enrollments screen displays with the Manage enrollments item selected from the left menu and the +Add enrollment group button highlighted on the toolbar.](media/dps_manageenrollments_menu.png "DPS Add enrollment group")
+    ![The DPS Manage enrollments screen displays with the Manage enrollments item selected from the left menu and the +Add enrollment group button highlighted on the toolbar.](media/image15.png "DPS Add enrollment group")
 
 2. In the Add Enrollment Group form, populate it as follows, then select the **Save** button.
 
@@ -202,7 +206,7 @@ Creating an enrollment group enables Fabrikam to allow devices to self-register.
     - **Initial Device Twin State**: Retain the default value.
     - **Enable entry**: Select `Enable`.
   
-   ![The Add Enrollment Group form is shown populated with the preceding values.](media/dps_addenrollmentgroup_form.png "Add Enrollment Group form")
+   ![The Add Enrollment Group form is shown populated with the preceding values.](media/image6.png "Add Enrollment Group form")
 
 3. Select the newly created enrollment group from the **Enrollment Groups** list.
 
