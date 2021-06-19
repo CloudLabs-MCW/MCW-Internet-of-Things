@@ -689,45 +689,45 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
 
 2. Select **My Workspace** on the left-hand menu, then select the **Datasets + dataflows tab**, and locate the **avgtemps** dataset from the list.
 
-   > **Note:** Sometimes it takes few minutes for the dataset to appear in the Power BI Dataset tab under **My Workspace**
+> **Note:** Sometimes it takes few minutes for the dataset to appear in the Power BI Dataset tab under **My Workspace**
 
-   ![On the Power BI window, My Workspace is highlighted in the left pane, and the Datasets tab is highlighted in the right pane, and the avgtemps dataset is highlighted.](media/power-bi-workspaces-datasets-avgtemps.png 'Power BI Datasets')
+   ![On the Power BI window, My Workspace is highlighted in the left pane, and the Datasets tab is highlighted in the right pane, and the avgtemps dataset is highlighted.](media/image45.png 'Power BI Datasets')
 
-3. Select the **Create Report** button under the **Actions** menu.
+3. Click on ellipses and select the **Create Report** button.
 
-   ![On the Datasets tab, under Actions, the Create Report button is highlighted.](./media/power-bi-datasets-avgtemps-create-report.png 'Datasets tab, Action column')
+   ![On the Datasets tab, under Actions, the Create Report button is highlighted.](./media/image46.png 'Datasets tab, Action column')
 
 4. On the **Visualizations** palette, select **Stacked column chart** to create a chart visualization.
 
-   ![On the Visualizations palette, the stacked column chart icon is highlighted.](./media/power-bi-visualizations-stacked-column-chart.png 'Visualizations palette')
+   ![On the Visualizations palette, the stacked column chart icon is highlighted.](./media/image47.png 'Visualizations palette')
 
 5. In the **Fields** listing, drag the **id** field, and drop it into the **Axis** field.
 
-   ![Under Fields, an arrow points from the id field under avgtemps, to the same id field now located in the Visualizations listing, under Axis.](./media/power-bi-visualizations-stacked-column-chart-axis.png 'Visualizations and Fields')
+   ![Under Fields, an arrow points from the id field under avgtemps, to the same id field now located in the Visualizations listing, under Axis.](./media/image48.png 'Visualizations and Fields')
 
 6. Next, drag the **Average** field and drop it into the **Values** field.
 
-   ![Under Fields, an arrow points from the average field under avgtemps, to the same Average field now located in the Visualizations listing, under Values.](./media/power-bi-visualizations-stacked-column-chart-value.png 'Visualizations and Fields')
+   ![Under Fields, an arrow points from the average field under avgtemps, to the same Average field now located in the Visualizations listing, under Values.](./media/image49.png 'Visualizations and Fields')
 
 7. Now, set the **Values** to **Max of average**, by selecting the down arrow next to **Average**, and select **Maximum**.
 
-   ![On the Value drop-down list, Maximum is highlighted.](./media/power-bi-visualizations-stacked-column-chart-value-maximum.png 'Value drop-down list')
+   ![On the Value drop-down list, Maximum is highlighted.](./media/image50.png 'Value drop-down list')
 
 8. Repeat steps 4-7, this time adding a Stacked Column Chart for **Min of average**. (You may need to select on any area of white space on the report designer surface to deselect the Max of average by id chart visualization.)
 
-   ![Min of average is added under Value.](./media/power-bi-visualizations-stacked-column-chart-value-minimum.png 'Min of average')
+   ![Min of average is added under Value.](./media/image51.png 'Min of average')
 
 9. Next, add a **table visualization**.
 
-   ![On the Visualizations palette, the table icon is highlighted.](./media/power-bi-visualizations-table.png 'Visualizations pallete')
+   ![On the Visualizations palette, the table icon is highlighted.](./media/image52.png 'Visualizations pallete')
 
 10. Set the values to **id** and **Average of Average**, by dragging and dropping both fields in the **Values** field, then selecting the dropdown next to **Average**, and selecting **Average**.
 
-    ![ID and Average of average now display under Values.](./media/power-bi-visualizations-table-average-of-average.png 'Table Visualization values')
+    ![ID and Average of average now display under Values.](./media/image53.png 'Table Visualization values')
 
 11. Under the **File** menu, select to **Save** the report.
 
-    ![Under File, Save is highlighted.](media/power-bi-save-report.png 'Save report')
+    ![Under File, Save is highlighted.](media/image54.png 'Save report')
 
 12. Enter the name `Average Temperatures`, and select **Save**.
 
@@ -735,7 +735,7 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
 
 13. Within the report, select one of the columns to see the data for just that device.
 
-    ![The report window has two bar graphs: Max of average by id, and Min of average by id. Both bar charts list data for Device0, Device1, Device3, Device8, and Device9. Device1 is selected. Below the bar charts, a table displays data for Device1, with an Average of average value of 68.61.](./media/power-bi-report-reading-view-single-device.png 'Report window')
+    ![The report window has two bar graphs: Max of average by id, and Min of average by id. Both bar charts list data for Device0, Device1, Device3, Device8, and Device9. Device1 is selected. Below the bar charts, a table displays data for Device1, with an Average of average value of 68.61.](./media/image55.png 'Report window')
 
 ## Exercise 4: Cold path data processing with Azure Databricks
 
