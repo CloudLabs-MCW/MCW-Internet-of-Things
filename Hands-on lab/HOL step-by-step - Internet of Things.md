@@ -334,27 +334,27 @@ You will want to avoid entering the DPS Group Enrollment Key and ID Scope every 
    - Right-click on the **MainForm.resx** file, then select **Properties**.
    - Check the **Unblock** checkbox on the bottom of the **General** tab, then select **Apply** then **OK**.
 
-   ![Right-click MainForm.resx, go to Properties, then check the box next to Unblock](media/unblock-file.png 'Unblock file')
+   ![Right-click MainForm.resx, go to Properties, then check the box next to Unblock](media/image19.png 'Unblock file')
 
    - Close and reopen **Visual Studio**. Re-open the **MainForm.cs** file.
 
     >**Note**: If you are still unable to see the Windows Forms designer, close it, then right-click the project and select **Clean**. Then, right-click the project again and select **Build**. Now, you should be able to open the form without a problem.
     >
-    >    ![Building and cleaning the solution to ensure that the Windows Forms editor shows up.](./media/build-and-clean-solution.png "Building and cleaning solution")
+    >    ![Building and cleaning the solution to ensure that the Windows Forms editor shows up.](./media/image20.png "Building and cleaning solution")
   
 3. In the **Windows Forms designer surface**, select the **DPS Group Enrollment Primary Key** textbox.
 
-   ![The Windows Form designer surface is opened to the MainForm.cs tab. The DPS Group Enrollment Primary Key textbox is highlighted, but is empty.](./media/smart-meter-simulator-iot-hub-connection-string.png 'Windows Form designer surface')
+   ![The Windows Form designer surface is opened to the MainForm.cs tab. The DPS Group Enrollment Primary Key textbox is highlighted, but is empty.](./media/image21.png 'Windows Form designer surface')
 
 4. In the **Properties** panel, scroll until you see the **Text** property. Paste your **DPS Enrollment Group Primary Key** value copied from Exercise 1, Task 4, Step 4 into the value for the **Text** property. (If the properties window is not visible below the Solution Explorer, right-click the TextBox, and select **Properties**.)
 
-   ![In the Properties panel, the Text property is highlighted, and is populated.](./media/smart-meter-simulator-iot-hub-connection-string-text-property.png 'Textbox properties')
+   ![In the Properties panel, the Text property is highlighted, and is populated.](./media/image22.png 'Textbox properties')
 
 5. Repeat steps 3 and 4 to populate the **DPS ID Scope** textbox with the value you recorded in Exercise 1, Task 2, Step 6.
 
 6. Your DPS Group Enrollment Primary Key and ID Scope should now be present every time you run the **Smart Meter Simulator**.
 
-   ![The Windows Form designer surface is opened to the MainForm.cs tab. The IoT Hub Connection String now displays.](./media/smart-meter-simulator-iot-hub-connection-string-populated.png 'IoT Hub Connection String dialog')
+   ![The Windows Form designer surface is opened to the MainForm.cs tab. The IoT Hub Connection String now displays.](./media/image23.png 'IoT Hub Connection String dialog')
 
 7. Save **MainForm.cs**.
 
@@ -547,41 +547,43 @@ In this task, you will build and run the Smart Meter Simulator project.
 
 1. In **Visual Studio** select **Build** from the Visual Studio menu, then select **Build Solution**.
 
+   ![The green Start button is highlighted on the Visual Studio toolbar.](media/image24.png 'Visual Studio toolbar')
+
 2. Run the **Smart Meter Simulator**, by selecting the green **Start** button on the Visual Studio toolbar.
 
-   ![The green Start button is highlighted on the Visual Studio toolbar.](media/visual-studio-toolbar-start.png 'Visual Studio toolbar')
+   ![The green Start button is highlighted on the Visual Studio toolbar.](media/image25.png 'Visual Studio toolbar')
 
 3. Select one or more of the windows within the building to simulate the installation of a smart meter device. Once selected, the window will turn yellow.
 
-    ![The smart meter simulator displays with three windows in yellow.](media/smart-meter-simulator-install-windows.png "The smart meter simulator")
+    ![The smart meter simulator displays with three windows in yellow.](media/image26.png "The smart meter simulator")
 
 4. Select **Register** on the **Smart Meter Simulator** window, this triggers the smart meter automatic registration through the enrollment group. It will take a few seconds for each of the yellow (installed) windows to turn to cyan, indicating the device is registered.
 
-   ![The smart meter simulator window is shown with the previously yellow windows now displaying as cyan.](media/smart-meter-simulator-register.png 'Fabrikam Smart Meter Simulator')
+   ![The smart meter simulator window is shown with the previously yellow windows now displaying as cyan.](media/image27.png 'Fabrikam Smart Meter Simulator')
 
 5. At this point, you have installed and registered one or more devices (in cyan). To view this list of devices, you will switch over to the **Azure Portal**, and open the **IoT Hub** you provisioned.
 
 6. From the **IoT Hub** blade, select **IoT Devices** under **Explorers** on the left-hand menu.
 
-   ![On the IoT Hub blade, in the Explorers section, under Explorers, IoT Devices is highlighted.](media/iot-hub-explorers-iot-devices.png 'IoT Hub blade, Explorers section')
+   ![On the IoT Hub blade, in the Explorers section, under Explorers, IoT Devices is highlighted.](media/image28.png 'IoT Hub blade, Explorers section')
 
 7. You should see all your registered devices listed having a status of **enabled**.
 
-   ![Devices in the Device ID list have a status of either enabled or disabled.](media/iot-hub-iot-devices-list.png 'Device ID list')
+   ![Devices in the Device ID list have a status of either enabled or disabled.](media/image29.png 'Device ID list')
 
 8. In the **Azure Portal**, open the Device Provisioning Service resource, then select **Manage enrollments** from the left menu. Select the **smartmeter-device-group** enrollment group.
 
-    ![The DPS Manage enrollments screen is shown with Manage enrollments selected in the left menu and the smartmeter-device-group highlighted in the enrollment groups listing.](media/dps_select_enrollmentgroup.png "Enrollment Groups Listing")
+    ![The DPS Manage enrollments screen is shown with Manage enrollments selected in the left menu and the smartmeter-device-group highlighted in the enrollment groups listing.](media/image30.png "Enrollment Groups Listing")
 
 9. In the Enrollment Group Details screen, select the **Registration Records** tab and notice the devices selected for registration in the simulator application are listed.
 
-    ![The DPS Enrollment Group Details screen displays with the Registration Records tab highlighted and a list of registered devices.](media/dps_enrollmentgroup_registrationrecords.png "Enrollment Group Registration Records")
+    ![The DPS Enrollment Group Details screen displays with the Registration Records tab highlighted and a list of registered devices.](media/image31.png "Enrollment Group Registration Records")
 
 10. Return to the **Smart Meter Simulator** window.
 
 11. Select **Connect**. Within a few moments, you should begin to see activity as the windows change color, indicating the smart meters are transmitting telemetry. The grid on the left will list each telemetry message transmitted and the simulated temperature value.
 
-    ![On the Smart Meter Simulator, the Connect button is highlighted, and one of the green windows has now turned to blue. The current windows count is now seven gray, two green, and one blue.](media/smart-meter-simulator-connect.png 'Fabrikam Smart Meter Simulator')
+    ![On the Smart Meter Simulator, the Connect button is highlighted, and one of the green windows has now turned to blue. The current windows count is now seven gray, two green, and one blue.](media/image32.png 'Fabrikam Smart Meter Simulator')
 
 12. Allow the smart meter to continue to run for the duration of the lab.
 
@@ -595,7 +597,7 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
 
 1. In the [Azure Portal](https://portal.azure.com), expand the left menu and select **+ Create a resource**, enter `stream analytics` into the **Search the Marketplace** box, select **Stream Analytics job** from the results, and select **Create**.
 
-   ![In the Azure Portal, +Create a resource is highlighted, "stream analytics" is entered into the Search the Marketplace box, and Stream Analytics job is highlighted in the results.](media/create-resource-stream-analytics-job.png 'Create Stream Analytics job')
+   ![In the Azure Portal, +Create a resource is highlighted, "stream analytics" is entered into the Search the Marketplace box, and Stream Analytics job is highlighted in the results.](media/image33.png 'Create Stream Analytics job')
 
 2. On the New Stream Analytics Job form, enter the following:
 
@@ -605,18 +607,19 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
    - **Location**: Select the location you are using for resources in this hands-on lab.
    - **Hosting environment**: Select **Cloud**.
    - **Streaming units**: Change the value to `1` by sliding the slider all the way left.
+   - Select **Create**.
 
-     ![The New Stream Analytics Job form is displayed, with the previously mentioned settings entered into the appropriate fields.](media/stream-analytics-job-create.png 'New Stream Analytics Job form')
+     ![The New Stream Analytics Job form is displayed, with the previously mentioned settings entered into the appropriate fields.](media/image34.png 'New Stream Analytics Job form')
 
-3. Select **Create**.
+3. Once the deployment is completed, click on **Go to resource** present under **Your deployment is completed** section.
 
-4. Once provisioned, navigate to your new **Stream Analytics job** in the portal.
+     ![The New Stream Analytics Job form is displayed, with the previously mentioned settings entered into the appropriate fields.](media/image35.png 'New Stream Analytics Job form')
 
-5. On the **Stream Analytics job** blade, select **Inputs** from the left-hand menu, under **Job Topology**, then select **+Add stream input**, and select **IoT Hub** from the dropdown menu to add an input connected to your IoT Hub.
+4. On the **Stream Analytics job** blade, select **Inputs** from the left-hand menu, under **Job Topology**, then select **+Add stream input**, and select **IoT Hub** from the dropdown menu to add an input connected to your IoT Hub.
 
-   ![On the Stream Analytics job blade, Inputs is selected under Job Topology in the left-hand menu, and +Add stream input is highlighted in the Inputs blade, and IoT Hub is highlighted in the drop down menu.](media/stream-analytics-job-inputs-add.png 'Add Stream Analytics job inputs')
+   ![On the Stream Analytics job blade, Inputs is selected under Job Topology in the left-hand menu, and +Add stream input is highlighted in the Inputs blade, and IoT Hub is highlighted in the drop down menu.](media/image36.png 'Add Stream Analytics job inputs')
 
-6. On the **New Input** blade, enter the following:
+5. On the **New Input** blade, enter the following:
 
    - **Input alias**: Enter `temps`.
    - Choose **Select IoT Hub from your subscriptions**.
@@ -629,36 +632,33 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
    - **Event serialization format**: Select **JSON**.
    - **Encoding**: Select **UTF-8**.
    - **Event compression type**: Leave set to **None**.
+   - Select **Save**.
 
-     ![IoT Hub New Input blade is displayed with the values specified above entered into the appropriate fields.](media/stream-analytics-job-inputs-add-iot-hub-input.png 'IoT Hub New Input blade')
+     ![IoT Hub New Input blade is displayed with the values specified above entered into the appropriate fields.](media/image37.png 'IoT Hub New Input blade')
 
-7. Select **Save**.
+6. Next, select **Outputs** from the left-hand menu, under **Job Topology**, and select **+ Add**, then select **Power BI** from the drop-down menu.
 
-8. Next, select **Outputs** from the left-hand menu, under **Job Topology**, and select **+ Add**, then select **Power BI** from the drop-down menu.
+   ![Outputs is highlighted in the left-hand menu, under Job Topology, +Add is selected, and Power BI is highlighted in the drop down menu.](media/image38.png 'Add Power BI Output')
 
-   ![Outputs is highlighted in the left-hand menu, under Job Topology, +Add is selected, and Power BI is highlighted in the drop down menu.](media/stream-analytics-job-outputs-add-power-bi.png 'Add Power BI Output')
+7. Once authorized, enter the following:
 
-9. In the **Power BI** blade, select **Authorize** to authorize the connection to your Power BI account. When prompted in the popup window, enter the account credentials you used to create your Power BI account in [Before the hands-on lab setup guide, Task 1](./Before%20the%20HOL%20-%20Internet%20of%20Things.md).
+  - **Output alias**: Set to **powerbi**
+  - **Group Workspace**: Select the default, **My Workspace**.
+  - **Authentication mode**: Select **User token**.
+  - **Dataset Name**: Enter `avgtemps`
+  - **Table Name**: Enter `avgtemps`
+  - Select **Authorize** to authorize the connection to your Power BI account. When prompted in the popup window, enter the account credentials given below to create your Power BI account:
+    - Username: **<inject key="AzureAdUserEmail" />**
+    - Password: **<inject key="AzureAdUserPassword" />**
 
-    ![The Authorize connection message is displayed and the Authorize button is highlighted.](media/stream-analytics-job-outputs-add-power-bi-authorize.png 'Power BI new output blade')
+    ![Power BI blade. Output alias is powerbi, dataset name is avgtemps, table name is avgtemps, authentication mode is User token.](media/image39.png 'Add Power BI Output')
 
-10. Once authorized, enter the following:
 
-    - **Output alias**: Set to `powerbi`
-    - **Group Workspace**: Select the default, **My Workspace**.
-    - **Authentication mode**: Select **User token**.
-    - **Dataset Name**: Enter `avgtemps`
-    - **Table Name**: Enter `avgtemps`
+8. Once you get authorized then select **Save**.
 
-    ![Power BI blade. Output alias is powerbi, dataset name is avgtemps, table name is avgtemps, authentication mode is User token.](media/stream-analytics-job-outputs-add-power-bi-save.png 'Add Power BI Output')
+    ![The Authorize connection message is displayed and the Authorize button is highlighted.](media/image40.png 'Power BI new output blade')
 
-11. Select **Save**.
-
-12. Next, select **Query** from the left-hand menu, under **Job Topology**.
-
-    ![Under Job Topology, Query is selected.](./media/stream-analytics-job-query.png 'Stream Analytics Query')
-
-13. In the **Query** text box, paste the following query.
+9. Next, select **Query** from the left-hand menu, under **Job Topology**. In the **Query** text box, paste the following query and select **Save query**
 
     ```sql
     SELECT AVG(temp) AS Average, id
@@ -666,26 +666,22 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
     FROM temps
     GROUP BY TumblingWindow(minute, 5), id
     ```
+   
+   ![Save button on the Query blade is highlighted](./media/image41.png 'Query Save button')
 
-14. Select **Save query**.
+10. Return to the **Overview** blade on your **Stream Analytics job** and select **Start**.
 
-    ![Save button on the Query blade is highlighted](./media/stream-analytics-job-query-save.png 'Query Save button')
+    ![The Start button is highlighted on the Overview blade.](./media/image42.png 'Overview blade start button')
 
-15. Return to the **Overview** blade on your **Stream Analytics job** and select **Start**.
+11. In the **Start job** blade, select **Now** (the job will start processing messages from the current point in time onward) and select **Start**.
 
-    ![The Start button is highlighted on the Overview blade.](./media/stream-analytics-job-start.png 'Overview blade start button')
+    ![Now is selected on the Start job blade.](./media/image43.png 'Start job blade')
 
-16. In the **Start job** blade, select **Now** (the job will start processing messages from the current point in time onward).
+12. Allow your Stream Analytics Job a few minutes to start.
 
-    ![Now is selected on the Start job blade.](./media/stream-analytics-job-start-job.png 'Start job blade')
+13. Once the Stream Analytics Job has successfully started, verify that you are showing a non-zero amount of **Input Events** on the **Monitoring** chart on the **Overview** blade. You may need to reconnect your devices on the **Smart Meter Simulator** and let it run for a while to see the events.
 
-17. Select **Start**.
-
-18. Allow your Stream Analytics Job a few minutes to start.
-
-19. Once the Stream Analytics Job has successfully started, verify that you are showing a non-zero amount of **Input Events** on the **Monitoring** chart on the **Overview** blade. You may need to reconnect your devices on the **Smart Meter Simulator** and let it run for a while to see the events.
-
-    ![The Stream Analytics job monitoring chart is displayed with a non-zero amount of input events highlighted.](media/stream-analytics-job-monitoring-input-events.png 'Monitoring chart for Stream Analytics job')
+    ![The Stream Analytics job monitoring chart is displayed with a non-zero amount of input events highlighted.](media/image44.png 'Monitoring chart for Stream Analytics job')
 
 ### Task 2: Visualize hot data with Power BI
 
