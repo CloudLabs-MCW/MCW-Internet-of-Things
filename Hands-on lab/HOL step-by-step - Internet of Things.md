@@ -224,7 +224,7 @@ Fabrikam has left you a partially completed sample in the form of the Smart Mete
 
 ### Task 1: Implement device management with the IoT Hub
 
-1. In **Visual Studio** on your **Lab VM**, use **Solution Explorer** to open the file `DeviceManager.cs`.
+1. In **Visual Studio** on your **Lab VM**, use **Solution Explorer**, navigate go to **C:\SmartMeter\MCW-Internet-of-Things-main\Hands-on lab\lab-files\starter-project** and open the file **DeviceManager.cs**.
 
 2. From the Visual Studio **View** menu, choose **Task List**.
 
