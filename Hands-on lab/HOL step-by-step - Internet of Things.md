@@ -100,7 +100,7 @@ In these steps, you will provision an instance of IoT Hub.
 
 1. In your browser, navigate to the [Azure portal](https://portal.azure.com), select **+Create a resource** in the navigation pane, enter _IoT Hub_ into the **Search the Marketplace** box, and select **IoT Hub** from the results.
 
-   !["IoT Hub" is entered into the Search the Marketplace box. IoT Hub is highlighted in the search results.](./media/create-resource-iot-hub.png 'Create an IoT Hub')
+   !["IoT Hub" is entered into the Search the Marketplace box. IoT Hub is highlighted in the search results.](./media/image80.png 'Create an IoT Hub')
 
 2. On the resource overview page, select **Create**.
 
@@ -112,13 +112,13 @@ In these steps, you will provision an instance of IoT Hub.
 
    - **Region**: Select the location you are using for this hands-on lab.
 
-   - **IoT Hub Name**: Enter a unique name, such as `smartmeter-hub-SUFFIX`.
+   - **IoT Hub Name**: Enter a unique name, such as **smartmeter-hub-SUFFIX**.
 
      ![The Basics tab for IoT Hub is displayed, with the values specified above entered into the appropriate fields.](./media/image01.png 'Create IoT Hub Basics tab')
 
 4. Select the **Management** tab. Accept the default Pricing and scale tier of **S1: Standard tier**, and select **Review + create**.
 
-    ![The Management tab for IoT Hub is displayed with the Standard pricing tier selected.](media/image02.png 'Create IoT Hub Management tab')
+    ![The Management tab for IoT Hub is displayed with the Standard pricing tier selected.](media/image81.png 'Create IoT Hub Management tab')
 
 5. Once validation has passed, select **Create**.
 
@@ -154,7 +154,7 @@ In these steps, you will deploy an instance of the Device Provisioning Service (
 
    - **Resource group**: Choose Use existing and select the **hands-on-lab-SUFFIX** resource group.
 
-   - **Name**: Enter a unique name, such as `smartmeter-dps-SUFFIX`.
+   - **Name**: Enter a unique name, such as **smartmeter-dps-SUFFIX**.
 
    - **Region**: Select the location you are using for this hands-on lab.
 
@@ -181,8 +181,8 @@ In these steps, you will deploy an instance of the Device Provisioning Service (
 2. In the Add link to IoT hub blade, populate the form as follows, then select **Save**:
 
    - **Subscription**: Select the subscription you are using for this hands-on lab.
-   - **IoT Hub**: Select the `smartmeter-hub-{SUFFIX}` IoT Hub.
-   - **Access Policy**: Select `iothubowner`.
+   - **IoT Hub**: Select the **smartmeter-hub-{SUFFIX}** IoT Hub.
+   - **Access Policy**: Select **iothubowner**.
 
     ![The Add link to IoT hub blade is shown populated with the preceding values.](media/image14.png "Add link to IoT hub blade")
 
@@ -196,15 +196,15 @@ Creating an enrollment group enables Fabrikam to allow devices to self-register.
 
 2. In the Add Enrollment Group form, populate it as follows, then select the **Save** button.
 
-    - **Group name**: Enter `smartmeter-device-group`.
-    - **Attestation Type**: Select `Symmetric Key`.
+    - **Group name**: Enter **smartmeter-device-group**.
+    - **Attestation Type**: Select **Symmetric Key**.
     - **Auto-generate keys**: Checked.
-    - **IoT Edge device**: Select `False`.
-    - **Select how you want to assign devices to hubs**: Select `Evenly weighted distribution`.
-    - **Select the IoT hubs this group can be assigned to**: Select `smartmeter-hub-{SUFFIX}`.
-    - **Select how you want the device data to be handled on re-provisioning**: Select `Re-provision and migrate data`.
+    - **IoT Edge device**: Select **False**.
+    - **Select how you want to assign devices to hubs**: Select **Evenly weighted distribution**.
+    - **Select the IoT hubs this group can be assigned to**: Select **smartmeter-hub-{SUFFIX}**.
+    - **Select how you want the device data to be handled on re-provisioning**: Select **Re-provision and migrate data**.
     - **Initial Device Twin State**: Retain the default value.
-    - **Enable entry**: Select `Enable`.
+    - **Enable entry**: Select **Enable**.
   
    ![The Add Enrollment Group form is shown populated with the preceding values.](media/image16.png "Add Enrollment Group form")
 
@@ -656,7 +656,7 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
 
 8. Once you get authorized then select **Save**.
 
-    ![The Authorize connection message is displayed and the Authorize button is highlighted.](media/image40.png 'Power BI new output blade')
+    ![The Authorize connection message is displayed and the Authorize button is highlighted.](media/image82.png 'Power BI new output blade')
 
 9. Next, select **Query** from the left-hand menu, under **Job Topology**. In the **Query** text box, paste the following query and select **Save query**
 
@@ -693,17 +693,17 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
 
    ![On the Power BI window, My Workspace is highlighted in the left pane, and the Datasets tab is highlighted in the right pane, and the avgtemps dataset is highlighted.](media/image45.png 'Power BI Datasets')
 
-3. Click on ellipses and select the **Create Report** button.
+3. Click on **ellipses** and select the **Create Report** button.
 
    ![On the Datasets tab, under Actions, the Create Report button is highlighted.](./media/image46.png 'Datasets tab, Action column')
 
 4. On the **Visualizations** palette, select **Stacked column chart** to create a chart visualization.
 
-   ![On the Visualizations palette, the stacked column chart icon is highlighted.](./media/image47.png 'Visualizations palette')
+   ![On the Visualizations palette, the stacked column chart icon is highlighted.](./media/image83.png 'Visualizations palette')
 
 5. In the **Fields** listing, drag the **id** field, and drop it into the **Axis** field.
 
-   ![Under Fields, an arrow points from the id field under avgtemps, to the same id field now located in the Visualizations listing, under Axis.](./media/image48.png 'Visualizations and Fields')
+   ![Under Fields, an arrow points from the id field under avgtemps, to the same id field now located in the Visualizations listing, under Axis.](./media/image84.png 'Visualizations and Fields')
 
 6. Next, drag the **Average** field and drop it into the **Values** field.
 
@@ -719,11 +719,11 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
 
 9. Next, add a **table visualization**.
 
-   ![On the Visualizations palette, the table icon is highlighted.](./media/image52.png 'Visualizations pallete')
+   ![On the Visualizations palette, the table icon is highlighted.](./media/image85.png 'Visualizations pallete')
 
 10. Set the values to **id** and **Average of Average**, by dragging and dropping both fields in the **Values** field, then selecting the dropdown next to **Average**, and selecting **Average**.
 
-    ![ID and Average of average now display under Values.](./media/image53.png 'Table Visualization values')
+    ![ID and Average of average now display under Values.](./media/image86.png 'Table Visualization values')
 
 11. Under the **File** menu, select to **Save** the report.
 
@@ -1042,7 +1042,7 @@ In this task, you will create a new Databricks notebook to perform some processi
 
 23. **Below** the results table, notice the area to change the visualization for the tabular output. Expand the **Chart** menu and choose the **Bar** option.
 
-    ![Buttons for displaying tabular results in different formats in Databricks](media/azure-databricks-notebook-visualizations.png 'Visualization options')
+    ![Buttons for displaying tabular results in different formats in Databricks](media/image87.png 'Visualization options')
 
 24. With the Bar chart visualization chosen, a **Plot Options..** button appears. Select **Plot Options..** and in the **Customize Plot** dialog, ensure the following are set:
 
@@ -1052,13 +1052,13 @@ In this task, you will create a new Databricks notebook to perform some processi
     - Select **Grouped** as the chart type.
     - **Display type**: Select **Bar chart**.
 
-      ![Plot customization options dialog in Azure databricks, with id in the Keys field, averageTemp in the Values field, Aggregation set to AVG, and the chart set to a grouped bar chart.](media/azure-databricks-notebook-customize-plot.png)
+      ![Plot customization options dialog in Azure databricks, with id in the Keys field, averageTemp in the Values field, Aggregation set to AVG, and the chart set to a grouped bar chart.](media/image88.png)
 
 25. Select **Apply**.
 
 26. Observe the results graphed as a column chart, where each column represents a device's average temperature.
 
-    ![A bar chart is displayed, with devices on the X axis, and average temperatures on the Y axis.](media/azure-databricks-notebook-visualizations-bar-chart.png 'Bar chart')
+    ![A bar chart is displayed, with devices on the X axis, and average temperatures on the Y axis.](media/image89.png 'Bar chart')
 
 ## Exercise 5: Sending commands to the IoT devices
 
@@ -1106,13 +1106,13 @@ In this task, you will leave the simulator running and separately launch the con
 
 4. Now enter a **temperature value** between 65 and 85 degrees (F) when prompted. If you set a value above 72 degrees, the window will turn red. If the value is set between 68 and 72 degrees, it will turn green. Values below 68 degrees will turn the window blue. Once you set a value, the device will remain at that value until you set a new value, rather than randomly changing.
 
-    ![A value of 70 has been entered for the temperature. A new log entry in the Smart Meter Simulator appears in yellow showing the message value of 70 sent to Device0.](media/console-temperature.png 'Console App and Smart Meter Simulator')
+    ![A value of 70 has been entered for the temperature. A new log entry in the Smart Meter Simulator appears in yellow showing the message value of 70 sent to Device0.](media/image90.png 'Console App and Smart Meter Simulator')
 
     If you run the **Smart Meter Simulator** side-by-side with the **console app**, you can observe the message logged by the Smart Meter Simulator within seconds. This message appears with a yellow background and displays the temperature request value sent to the device. In our case, we sent a request of 70 degrees to Device0. The console app indicates that it is sending the temperature request to the indicated device.
 
 5. Hover over the device to which you sent the message. You will see that its temperature is set to the value you requested through the console app.
 
-    ![Device0 is hovered over and the dialog appears showing the temperature set to the requested temperature.](media/smart-meter-simulator-set-temp.png 'Fabrikam Smart Meter Simulator')
+    ![Device0 is hovered over and the dialog appears showing the temperature set to the requested temperature.](media/image91.png 'Fabrikam Smart Meter Simulator')
 
 6. In the console window, you can enter `Y` to send another message. Experiment with setting the temperature on other devices and observe the results.
 
