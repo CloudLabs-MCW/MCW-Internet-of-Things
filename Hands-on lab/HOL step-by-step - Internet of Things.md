@@ -711,11 +711,11 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
 
 7. Now, set the **Values** to **Max of average**, by selecting the down arrow next to **Average**, and select **Maximum**.
 
-   ![On the Value drop-down list, Maximum is highlighted.](./media/image50.png 'Value drop-down list')
+   ![On the Value drop-down list, Maximum is highlighted.](./media/image93.png 'Value drop-down list')
 
 8. Repeat steps 4-7, this time adding a Stacked Column Chart for **Min of average**. (You may need to select on any area of white space on the report designer surface to deselect the Max of average by id chart visualization.)
 
-   ![Min of average is added under Value.](./media/image51.png 'Min of average')
+   ![Min of average is added under Value.](./media/image94.png 'Min of average')
 
 9. Next, add a **table visualization**.
 
