@@ -1057,7 +1057,7 @@ In this task, you will create a new Databricks notebook to perform some processi
 
 25. Observe the results graphed as a column chart, where each column represents a device's average temperature.
 
-    ![A bar chart is displayed, with devices on the X axis, and average temperatures on the Y axis.](media/image89.png 'Bar chart')
+    ![A bar chart is displayed, with devices on the X axis, and average temperatures on the Y axis.](media/image92.png 'Bar chart')
 
 ## Exercise 5: Sending commands to the IoT devices
 
