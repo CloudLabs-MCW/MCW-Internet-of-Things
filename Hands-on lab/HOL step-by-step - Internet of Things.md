@@ -735,7 +735,7 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
 
 13. Within the report, select one of the columns to see the data for just that device.
 
-    ![The report window has two bar graphs: Max of average by id, and Min of average by id. Both bar charts list data for Device0, Device1, Device3, Device8, and Device9. Device1 is selected. Below the bar charts, a table displays data for Device1, with an Average of average value of 68.61.](./media/image55.png 'Report window')
+    ![The report window has two bar graphs: Max of average by id, and Min of average by id. Both bar charts list data for Device0, Device1, Device3, Device8, and Device9. Device1 is selected. Below the bar charts, a table displays data for Device1, with an Average of average value of 68.61.](./media/image79.png 'Report window')
 
 ## Exercise 4: Cold path data processing with Azure Databricks
 
