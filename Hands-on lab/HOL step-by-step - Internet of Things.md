@@ -845,7 +845,7 @@ To capture all metrics for the cold path, set up another Stream Analytics job th
 
 10. Next, select **Query** from the left-hand menu, under **Job Topology**.
 
-    ![Under Job Topology, Query is selected.](./media/stream-analytics-job-query.png 'Stream Analytics Query')
+    ![Under Job Topology, Query is selected.](./media/image66.png 'Stream Analytics Query')
 
 11. In the **Query** text box, paste the following query.
 
@@ -860,21 +860,19 @@ To capture all metrics for the cold path, set up another Stream Analytics job th
 
 12. Select **Save query**, and **Yes** when prompted with the confirmation.
 
-    ![Save button on the Query blade is highlighted](./media/stream-analytics-job-query-save-2.png 'Query Save button')
+    ![Save button on the Query blade is highlighted](./media/image67.png 'Query Save button')
 
 13. Return to the **Overview** blade on your **Stream Analytics job** and select **Start**.
 
-    ![The Start button is highlighted on the Overview blade.](./media/stream-analytics-job-start.png 'Overview blade start button')
+    ![The Start button is highlighted on the Overview blade.](./media/image68.png 'Overview blade start button')
 
-14. In the **Start job** blade, select **Now** (the job will start processing messages from the current point in time onward).
+14. In the **Start job** blade, select **Now** (the job will start processing messages from the current point in time onward) and click on **Start**.
 
-    ![Now is selected on the Start job blade.](./media/stream-analytics-job-start-job.png 'Start job blade')
+    ![Now is selected on the Start job blade.](./media/image69.png 'Start job blade')
 
-15. Select **Start**.
+15. Allow your Stream Analytics Job a few minutes to start.
 
-16. Allow your Stream Analytics Job a few minutes to start.
-
-17. Once the Stream Analytics Job has successfully started, verify that you are showing a non-zero amount of **Input Events** on the **Monitoring** chart on the **Overview** blade. You may need to reconnect your devices on the **Smart Meter Simulator** and let it run for a while to see the events.
+16. Once the Stream Analytics Job has successfully started, verify that you are showing a non-zero amount of **Input Events** on the **Monitoring** chart on the **Overview** blade. You may need to reconnect your devices on the **Smart Meter Simulator** and let it run for a while to see the events.
 
     ![The Stream Analytics job monitoring chart is diplayed with a non-zero amount of input events highlighted.](media/stream-analytics-job-monitoring-events.png 'Monitoring chart for Stream Analytics job')
 
@@ -886,21 +884,21 @@ In this task, we are going to verify that the CSV file is being written to blob 
 
 1. Within **Visual Studio** on your **Lab VM**, select the **View** menu, then select **Cloud Explorer**.
 
-   ![On the Visual Studio View menu, Cloud Explorer is highlighted.](./media/visual-studio-menu-view-cloud-explorer.png 'Visual Studio View menu')
+   ![On the Visual Studio View menu, Cloud Explorer is highlighted.](./media/image70.png 'Visual Studio View menu')
 
 2. In **Cloud Explorer**, select **Account Management**, and connect to your Microsoft Azure Subscription.
 
-   ![The Cloud Explorer window displays, and the Account management icon is highlighted.](./media/visual-studio-cloud-explorer-account-management.png 'Cloud Explorer Account Management')
+   ![The Cloud Explorer window displays, and the Account management icon is highlighted.](./media/image70.png 'Cloud Explorer Account Management')
 
-3. If prompted, sign into your Azure account.
+> **Note:** If prompted, sign into your Azure account using your Azure credentials.
 
-4. Allow Cloud Explorer about 30 seconds to load your subscription resources.
+3. Allow Cloud Explorer about 30 seconds to load your subscription resources.
 
-5. Expand your **Azure subscription**, then expand **Storage Accounts**, expand the **smartmetersSUFFIX** storage account, then expand the **Blob containers** node, then right-click the **smartmeters** container, and select **Open**. It may take a few moments to load your storage accounts.
+4. Expand your **Azure subscription**, then expand **Storage Accounts**, expand the **smartmetersSUFFIX** storage account, then expand the **Blob containers** node, then right-click the **smartmeters** container, and select **Open**. It may take a few moments to load your storage accounts.
 
    ![Storage accounts is expanded in the Visual Studio Cloud Explorer, with the smartmetersSUFFIX account is expanded, and the Open menu item highlighted for the smartmeters container.](media/visual-studio-cloud-explorer-storage-accounts.png 'Cloud Explorer Storage Accounts')
 
-6. Verify files are being written to Blob storage (the files should be located underneath the **smartmeters** container).
+5. Verify files are being written to Blob storage (the files should be located underneath the **smartmeters** container).
 
    ![Files are listed in the blob storage account, as written by the cold path route in IoT Hub Messaging.](media/smart-meters-cold-path-files.png 'Smart meters files in blob storage')
 
@@ -912,13 +910,15 @@ In this task, you will create a new Databricks notebook to perform some processi
 
 1. In the [Azure portal](https://portal.azure.com), navigate to the **Azure Databricks** resource you created in the [Before the hands-on lab setup guide](./Before%20the%20HOL%20-%20Internet%20of%20Things.md) exercises, and select **Launch Workspace**.
 
-   ![On the Azure Databricks Service blade, the Launch Workspace button is highlighted.](media/azure-databricks-launch-workspace.png 'Launch Azure Databricks Workspace')
+   ![On the Azure Databricks Service blade, the Launch Workspace button is highlighted.](media/image72.png 'Launch Azure Databricks Workspace')
 
 2. On the **Azure Databricks** landing page, create a new notebook by selecting **New Notebook** under **Common Tasks**.
 
+   ![On the Azure Databricks Service blade, the Launch Workspace button is highlighted.](media/image73.png 'Launch Azure Databricks Workspace')
+
 3. In the **Create Notebook** dialog, enter `smartmeters` as the **Name** and select **Python** as the **Language**, then select **Create**.
 
-   ![In the Create Notebook dialog, smartmeters is entered as the Name, and Python is selected in the Language drop down.](media/azure-databricks-create-notebook-dialog.png 'Create Notebook dialog')
+   ![In the Create Notebook dialog, smartmeters is entered as the Name, and Python is selected in the Language drop down.](media/image74.png 'Create Notebook dialog')
 
     > **Note**: If your cluster is stopped, you can select the down arrow next to your attached cluster name, and select Start Cluster from the menu, then select Confirm when prompted.
 
@@ -1074,7 +1074,7 @@ This console app is configured to connect to IoT Hub using the same connection s
 
 2. In the **Solution Explorer**, expand the **CloudToDevice** project and open **Program.cs**. (If the Solution Explorer is not in the upper-right corner of your Visual Studio instance, you can find it under the View menu in Visual Studio.)
 
-    ![In the Visual Studio Solution Explorer window, CloudToDevice is expanded, and under it, Program.cs is highlighted.](media/visual-studio-solution-explorer-program-cs.png 'Visual Studio Solution Explorer')
+    ![In the Visual Studio Solution Explorer window, CloudToDevice is expanded, and under it, Program.cs is highlighted.](media/image75.png 'Visual Studio Solution Explorer')
 
 3. Replace **YOUR-CONNECTION-STRING** on line 13 with your IoT Hub connection string. This is the same string you added to the Main form in the SmartMeterSimulator earlier. The line you need to update looks like this:
 
@@ -1084,7 +1084,7 @@ This console app is configured to connect to IoT Hub using the same connection s
 
     After updating, your **Program.cs** file should look similar to the following:
 
-    ![The Program.cs file has been updated with the code change.](media/visual-studio-program-cs.png 'Program.cs')
+    ![The Program.cs file has been updated with the code change.](media/image76.png 'Program.cs')
 
 4. Save the file.
 
@@ -1094,9 +1094,11 @@ In this task, you will leave the simulator running and separately launch the con
 
 1. If you hover over one of the windows, you will see a dialog display information about the associated device, including the Device ID (in this case, **Device0**), Device Key, Temperature, and Indicator. The legend on the bottom shows the indicator displayed for each temperature range. The Device ID is important when sending cloud-to-device messages, as this is how we will target a specific device when we remotely set the desired temperature. Keep the Device ID values in mind when sending the messages in the next task.
 
-    ![A dialog containing device information is displayed after hovering over a window.](media/smart-meter-simulator-device-info.png 'Fabrikam Smart Meter Simulator')
+    ![A dialog containing device information is displayed after hovering over a window.](media/image77.png 'Fabrikam Smart Meter Simulator')
 
 2. Within the **SmartMeterSimulator** Visual Studio solution, right-click the **CloudToDevice** project, select **Debug**, then select **Start new instance** to run the console app.
+
+    ![A dialog containing device information is displayed after hovering over a window.](media/image78.png 'Fabrikam Smart Meter Simulator')
 
 3. In the **console window**, enter a **device number** when prompted. Accepted values are 0-9, since there are 10 devices whose IDs begin with 0. You can hover over the windows in the **Smart Meter Simulator** to view the Device IDs. When you enter a number, such as `0`, then a message will be sent to **Device0**. Be certain to select the device number of a registered window!
 
