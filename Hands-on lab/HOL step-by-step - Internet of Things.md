@@ -320,7 +320,7 @@ Fabrikam has left you a partially completed sample in the form of the Smart Mete
 
 ### Task 2: Configure the DPS Group Enrollment Key and ID Scope
 
-You will want to avoid entering the DPS Group Enrollment Key and ID Scope every time the project is run. To do this, you can set this value as the default text for the `DPS Group Enrollment Primary Key` and `DPS ID Scope` text boxes in the application. Follow these steps to configure the connection string:
+You will want to avoid entering the DPS Group Enrollment Key and ID Scope every time the project is run. To do this, you can set this value as the default text for the **DPS Group Enrollment Primary Key** and **DPS ID Scope** text boxes in the application. Follow these steps to configure the connection string:
 
 1. Return to the **SmartMeterSimulator** solution in **Visual Studio** on your **Lab VM**.
 
@@ -601,13 +601,13 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
 
 2. On the New Stream Analytics Job form, enter the following:
 
-   - **Job name**: Enter `hot-stream`.
+   - **Job name**: Enter **hot-stream**.
    - **Subscription**: Select the subscription you are using for this hands-on lab.
    - **Resource group**: Choose Use existing and select the **hands-on-lab-SUFFIX** resource group.
    - **Location**: Select the location you are using for resources in this hands-on lab.
    - **Hosting environment**: Select **Cloud**.
-   - **Streaming units**: Change the value to `1` by sliding the slider all the way left.
-   - Select **Create**.
+   - **Streaming units**: Change the value to **1** by sliding the slider all the way left.
+   - Click on **Create**.
 
      ![The New Stream Analytics Job form is displayed, with the previously mentioned settings entered into the appropriate fields.](media/image34.png 'New Stream Analytics Job form')
 
@@ -621,7 +621,7 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
 
 5. On the **New Input** blade, enter the following:
 
-   - **Input alias**: Enter `temps`.
+   - **Input alias**: Enter **temps**.
    - Choose **Select IoT Hub from your subscriptions**.
    - **Subscription**: Select the subscription you are using for this hands-on lab.
    - **IoT Hub**: Select the **smartmeter-hub-SUFFIX** IoT Hub.
@@ -645,8 +645,8 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
   - **Output alias**: Set to **powerbi**
   - **Group Workspace**: Select the default, **My Workspace**.
   - **Authentication mode**: Select **User token**.
-  - **Dataset Name**: Enter `avgtemps`
-  - **Table Name**: Enter `avgtemps`
+  - **Dataset Name**: Enter **avgtemps**
+  - **Table Name**: Enter **avgtemps**
   - Select **Authorize** to authorize the connection to your Power BI account. When prompted in the popup window, enter the account credentials given below to create your Power BI account:
     - Username: **<inject key="AzureAdUserEmail" />**
     - Password: **<inject key="AzureAdUserPassword" />**
@@ -729,7 +729,7 @@ Fabrikam would like to visualize the "hot" data showing the average temperature 
 
     ![Under File, Save is highlighted.](media/image54.png 'Save report')
 
-12. Enter the name `Average Temperatures`, and select **Save**.
+12. Enter the name **Average Temperatures**, and select **Save**.
 
     ![The report name is set to Average Temperatures.](./media/power-bi-save-report-average-temperatures.png 'Save your report')
 
@@ -753,7 +753,7 @@ Fabrikam would like to be able to capture all the "cold" data into scalable stor
 
    - **Subscription**: Select the subscription you are using for this hands-on lab.
    - **Resource group**: Choose Use existing and select the **hands-on-lab-SUFFIX** resource group.
-   - **Storage account name**: Enter `smartmetersSUFFIX`.
+   - **Storage account name**: Enter **smartmetersSUFFIX**.
    - **Location**: Select the location you are using for resources in this hands-on lab.
    - **Performance**: Select **Standard**.
    - **Redundancy**: Select **Locally-redundant storage (LRS)**.
@@ -764,7 +764,7 @@ Fabrikam would like to be able to capture all the "cold" data into scalable stor
 3. In the **Advanced** tab, select the following:
 
    - **Secure transfer required**: Unchecked.
-   - Select **Review + create**.
+   - Click on **Review + create**.
 
    ![The Create storage account blade is displayed with options under the Advanced tab.](media/image58.png 'Create storage account - Advanced')
 
@@ -786,12 +786,12 @@ To capture all metrics for the cold path, set up another Stream Analytics job th
 
 2. On the New Stream Analytics Job blade, enter the following:
 
-   - **Job name**: Enter `cold-stream`.
+   - **Job name**: Enter **cold-stream**.
    - **Subscription**: Select the subscription you are using for this hands-on lab.
    - **Resource group**: Select the **hands-on-lab-SUFFIX** resource group.
    - **Location**: Select the location you are using for resources in this hands-on lab.
    - **Hosting environment**: Select **Cloud**.
-   - **Streaming units**: Drag the slider all the way to the left to select `1` streaming unit.
+   - **Streaming units**: Drag the slider all the way to the left to select **1** streaming unit.
    - Select **Create**.
 
      ![The New Stream Analytics Job blade is displayed, with the previously mentioned settings entered into the appropriate fields.](media/image61.png 'New Stream Analytics Job blade')
@@ -804,7 +804,7 @@ To capture all metrics for the cold path, set up another Stream Analytics job th
 
 5. On the **New Input** blade, enter the following:
 
-   - **Input alias**: Enter `iothub`.
+   - **Input alias**: Enter **iothub**.
    - Choose **Select IoT Hub from your subscriptions**.
    - **Subscription**: Select the subscription you are using for this hands-on lab.
    - **IoT Hub**: Select the **smartmeter-hub-SUFFIX** IoT Hub.
@@ -825,13 +825,13 @@ To capture all metrics for the cold path, set up another Stream Analytics job th
 
 7. On the **Blob storage** output blade, enter the following:
 
-   - **Output alias**: Set to `blobs`.
+   - **Output alias**: Set to **blobs**.
    - Choose **Select blob storage from your subscriptions**.
    - **Subscription**: Select the subscription you are using for this hands-on lab.
    - **Storage account**: Select the **smartmetersSUFFIX** storage account you created in the previous task.
-   - **Container**: Choose **Create new** and enter `smartmeters`
+   - **Container**: Choose **Create new** and enter **smartmeters**
    - **Authentication mode**: Select **Connection string**.
-   - **Path pattern**: Enter `smartmeters/{date}/{time}`
+   - **Path pattern**: Enter **smartmeters/{date}/{time}**
    - **Date format**: Select **YYYY-DD-MM**.
    - **Time format**: Select **HH**.
    - **Event serialization format**: Select **CSV**, **comma (,)**
